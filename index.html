@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170d2e">
+<title>Lại Tố Quyên — Món quà 20/10</title>
+
+<style>
+:root {
+  --pink:#ff8fc8;
+  --rose:#ff5ca8;
+  --purple:#a78bfa;
+  --gold:#ffe7a3;
+  --line:rgba(255,255,255,.18);
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:auto; }
+body {
+  margin:0;
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:#fff4fb;
+  background:#10091f;
+  overflow:hidden;
+}
+body:before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  background:
+    radial-gradient(ellipse at 15% 15%,#54275f 0,transparent 42%),
+    radial-gradient(ellipse at 85% 35%,#34205e 0,transparent 40%),
+    linear-gradient(135deg,#10091f,#211037 55%,#10091f);
+}
+#stars {
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:-2;
+  overflow:hidden;
+}
+.star {
+  position:absolute;
+  width:2px;
+  height:2px;
+  background:#fff;
+  border-radius:50%;
+  opacity:.55;
+  animation:twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle {
+  0%,100% {opacity:.2;transform:scale(.7)}
+  50% {opacity:1;transform:scale(1.5)}
+}
+header {
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:100;
+  background:rgba(15,8,30,.82);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid #ffffff1a;
+}
+.nav {
+  max-width:1100px;
+  margin:auto;
+  padding:10px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.brand {font-weight:900;letter-spacing:.4px;color:#ffd3ed}
+.nav button,.btn {
+  border:1px solid #ffffff3d;
+  border-radius:999px;
+  padding:10px 16px;
+  color:white;
+  background:linear-gradient(120deg,#ff5ca84d,#a78bfa40);
+  cursor:pointer;
+  font-weight:700;
+  transition:transform .2s,box-shadow .2s;
+}
+.nav button:hover,.btn:hover {
+  transform:translateY(-2px);
+  box-shadow:0 8px 28px #ff5ca844;
+}
+
+/* HỆ THỐNG CHUYỂN CẢNH */
+main {
+  width:100%;
+  height:100vh;
+  height:100dvh;
+  margin:0;
+  padding:76px 18px 90px;
+  display:grid;
+  place-items:center;
+}
+main>section {
+  display:none;
+  position:relative;
+  width:min(100%,1050px);
+  height:100%;
+  max-height:100%;
+  margin:0;
+  padding:clamp(24px,5vw,54px);
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:linear-gradient(135deg,rgba(255,255,255,.095),rgba(255,255,255,.035));
+  box-shadow:0 20px 70px #0002;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#ff8fc888 transparent;
+}
+main>section.active-scene {
+  display:block;
+  animation:sceneEnter .65s ease both;
+}
+main>section.hero.active-scene {
+  display:grid;
+  place-items:center;
+}
+main>section:after {
+  content:"";
+  position:absolute;
+  inset:-1px;
+  pointer-events:none;
+  border-radius:inherit;
+  background:linear-gradient(110deg,transparent 25%,#ffffff12 45%,transparent 65%);
+  transform:translateX(-100%);
+  animation:shine 8s infinite;
+}
+@keyframes shine {
+  0%,65% {transform:translateX(-100%)}
+  85%,100% {transform:translateX(100%)}
+}
+@keyframes sceneEnter {
+  from {opacity:0;transform:translateX(35px) scale(.98);filter:blur(5px)}
+  to {opacity:1;transform:translateX(0) scale(1);filter:blur(0)}
+}
+.hero {
+  text-align:center;
+  background:radial-gradient(ellipse at center,#ff5ca82e,transparent 65%);
+}
+.eyebrow {
+  font-size:.8rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:#ffc6e6;
+  font-weight:800;
+}
+h1 {
+  font-size:clamp(2.6rem,8vw,5.8rem);
+  line-height:1.02;
+  margin:16px 0;
+  background:linear-gradient(100deg,#fff,#ffc5e6 35%,#d6c8ff 70%,#fff0c5);
+  color:transparent;
+  background-clip:text;
+  -webkit-background-clip:text;
+  text-shadow:0 0 35px #ff8fc833;
+}
+h2 {
+  font-size:clamp(1.7rem,4vw,2.6rem);
+  margin:0 0 16px;
+  color:#ffd1eb;
+}
+p {line-height:1.8;color:#f8e8f4;font-size:1.02rem}
+.lead {font-size:clamp(1rem,2.6vw,1.25rem);max-width:720px;margin:0 auto 24px}
+.center {text-align:center}
+.grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:14px;
+  margin-top:22px;
+}
+.tile {
+  padding:20px;
+  border-radius:20px;
+  background:#ffffff12;
+  border:1px solid #ffffff1f;
+  transition:transform .25s,background .25s;
+}
+.tile:hover {transform:translateY(-5px);background:#ffffff20}
+.big-emoji {
+  font-size:3.2rem;
+  display:block;
+  margin-bottom:10px;
+  filter:drop-shadow(0 0 12px #ff8fc855);
+}
+.note {
+  padding:20px;
+  border-left:3px solid var(--pink);
+  background:#ff8fc814;
+  border-radius:0 16px 16px 0;
+  font-style:italic;
+}
+.pill {
+  display:inline-block;
+  margin:4px;
+  padding:7px 12px;
+  border:1px solid #ffffff26;
+  border-radius:999px;
+  color:#ffe3f3;
+  background:#ffffff0a;
+}
+
+/* BÓ HOA */
+.bouquet-stage {
+  position:relative;
+  min-height:300px;
+  display:grid;
+  place-items:center;
+  margin:15px 0;
+}
+.bouquet-button {
+  border:0;
+  background:transparent;
+  cursor:pointer;
+  font-size:clamp(6rem,20vw,10rem);
+  filter:drop-shadow(0 0 28px #ff69b4aa);
+  transition:transform .35s;
+  position:relative;
+  z-index:2;
+}
+.bouquet-button:hover {transform:scale(1.08) rotate(-4deg)}
+.bouquet-caption {
+  position:absolute;
+  bottom:8px;
+  left:0;
+  right:0;
+  text-align:center;
+  color:#ffd8ed;
+}
+.mini-bouquet {
+  position:absolute;
+  font-size:clamp(2rem,6vw,4rem);
+  pointer-events:none;
+  animation:flowerBurst 2.8s cubic-bezier(.15,.75,.25,1) forwards;
+  filter:drop-shadow(0 0 12px #ff8fc8);
+}
+@keyframes flowerBurst {
+  0% {opacity:0;transform:translate(0,0) scale(.15) rotate(-30deg)}
+  15% {opacity:1}
+  70% {opacity:1}
+  100% {opacity:0;transform:translate(var(--x),var(--y)) scale(1.05) rotate(var(--r))}
+}
+.petal {
+  position:fixed;
+  top:-30px;
+  z-index:50;
+  pointer-events:none;
+  font-size:22px;
+  animation:fall linear forwards;
+}
+@keyframes fall {
+  to {transform:translate3d(var(--drift),110vh,0) rotate(720deg);opacity:.15}
+}
+
+/* HỘP QUÀ */
+.giftbox {
+  width:160px;
+  height:120px;
+  margin:28px auto 20px;
+  position:relative;
+  cursor:pointer;
+  transition:transform .3s;
+}
+.gift-base {
+  position:absolute;
+  bottom:0;
+  left:10px;
+  width:140px;
+  height:85px;
+  background:linear-gradient(135deg,#ff6cab,#9d72f5);
+  border-radius:8px;
+  box-shadow:0 14px 32px #ff5ca844;
+}
+.gift-base:after {
+  content:"";
+  position:absolute;
+  left:58px;
+  top:0;
+  width:24px;
+  height:100%;
+  background:#ffe7a3;
+}
+.gift-lid {
+  position:absolute;
+  top:24px;
+  left:0;
+  width:160px;
+  height:30px;
+  background:linear-gradient(90deg,#ff8fc8,#b99aff);
+  border-radius:7px;
+  transform-origin:12% 100%;
+  transition:transform .7s;
+  z-index:2;
+}
+.gift-lid:before,.gift-lid:after {
+  content:"";
+  position:absolute;
+  top:-22px;
+  width:35px;
+  height:28px;
+  border:8px solid #ffe7a3;
+  border-radius:50% 50% 0 50%;
+}
+.gift-lid:before {left:48px;transform:rotate(20deg)}
+.gift-lid:after {left:75px;transform:scaleX(-1) rotate(20deg)}
+.giftbox.open .gift-lid {transform:translate(-10px,-38px) rotate(-20deg)}
+.gift-message {
+  display:none;
+  max-width:620px;
+  margin:18px auto;
+  padding:20px;
+  border-radius:18px;
+  background:#ff8fc818;
+  border:1px solid #ff8fc855;
+}
+.gift-message.show {display:block;animation:sceneEnter .6s both}
+
+/* ĐIỀU ƯỚC */
+.wish-star {
+  display:inline-block;
+  font-size:2.2rem;
+  cursor:pointer;
+  margin:10px;
+  transition:transform .3s;
+  filter:drop-shadow(0 0 12px #ffe7a3);
+}
+.wish-star:hover {transform:scale(1.4) rotate(18deg)}
+#starWish {min-height:35px;color:#ffe7a3;font-weight:700}
+.bubble {
+  display:inline-grid;
+  place-items:center;
+  width:90px;
+  height:90px;
+  margin:8px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 25%,#fff9,transparent 22%),linear-gradient(135deg,#ff8fc866,#a78bfa77);
+  border:1px solid #ffffff77;
+  box-shadow:inset -10px -12px 22px #4c247955,0 0 20px #ff8fc822;
+  cursor:pointer;
+  font-size:2.1rem;
+  transition:transform .25s;
+}
+.bubble:hover {transform:translateY(-8px) scale(1.04)}
+#bubbleWish {min-height:34px;color:#ffd3eb}
+#randomWish {min-height:54px;font-size:1.2rem;color:#ffe7a3}
+footer {display:none}
+
+/* THANH CHUYỂN CẢNH */
+#sceneProgress {
+  position:fixed;
+  z-index:200;
+  top:0;
+  left:0;
+  height:3px;
+  width:0;
+  background:linear-gradient(90deg,#ff8fc8,#a78bfa,#ffe7a3);
+  transition:width .45s ease;
+}
+#sceneControls {
+  position:fixed;
+  z-index:150;
+  bottom:0;
+  left:0;
+  right:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  padding:12px;
+  background:#0f081ee8;
+  backdrop-filter:blur(16px);
+  border-top:1px solid #ffffff20;
+}
+#sceneControls button {
+  border:1px solid #ffffff35;
+  border-radius:999px;
+  padding:11px 18px;
+  color:white;
+  background:linear-gradient(120deg,#ff5ca866,#a78bfa66);
+  font-weight:700;
+  cursor:pointer;
+}
+#sceneControls button:disabled {opacity:.35;cursor:not-allowed}
+#sceneCounter {
+  min-width:72px;
+  text-align:center;
+  color:#ffe3f3;
+  font-weight:800;
+  font-variant-numeric:tabular-nums;
+}
+
+/* NHẠC YOUTUBE */
+#musicButton {
+  position:fixed;
+  z-index:300;
+  right:12px;
+  bottom:76px;
+  padding:10px 14px;
+  border:1px solid #ffffff45;
+  border-radius:25px;
+  background:linear-gradient(45deg,#ff69b4,#a855f7);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  box-shadow:0 5px 20px #0004;
+}
+
+/* PHÁO HOA CUỐI */
+#finalOverlay {
+  position:fixed;
+  inset:0;
+  z-index:1000;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:22px;
+  background:radial-gradient(ellipse at center,#28103f 0,#080611 78%);
+  overflow:hidden;
+}
+#finalOverlay.show {display:flex;animation:fadeIn .8s both}
+@keyframes fadeIn {from{opacity:0}to{opacity:1}}
+#fireworks {position:absolute;inset:0;width:100%;height:100%}
+.final-card {
+  position:relative;
+  z-index:2;
+  max-width:800px;
+  max-height:85vh;
+  overflow-y:auto;
+  padding:clamp(22px,5vw,52px);
+  border:1px solid #ffffff33;
+  border-radius:28px;
+  background:#160b2bba;
+  backdrop-filter:blur(10px);
+  box-shadow:0 0 65px #ff5ca833;
+  animation:finalPop 1s .3s both;
+}
+@keyframes finalPop {
+  from {opacity:0;transform:scale(.75) translateY(20px)}
+  to {opacity:1;transform:scale(1) translateY(0)}
+}
+.final-card h2 {
+  font-size:clamp(2rem,6vw,4rem);
+  background:linear-gradient(90deg,#fff,#ffc3e5,#ffe7a3);
+  color:transparent;
+  background-clip:text;
+  -webkit-background-clip:text;
+}
+.final-card p {font-size:clamp(1rem,2.5vw,1.25rem)}
+.close-final {
+  position:absolute;
+  right:18px;
+  top:15px;
+  z-index:5;
+  background:#ffffff18;
+  border:1px solid #ffffff44;
+  border-radius:50%;
+  color:#fff;
+  width:42px;
+  height:42px;
+  font-size:1.2rem;
+  cursor:pointer;
+}
+@media(max-width:600px) {
+  .nav {padding:9px 12px}
+  .brand {font-size:.82rem}
+  main {padding:66px 9px 82px}
+  main>section {padding:24px 17px;border-radius:22px}
+  .grid {grid-template-columns:1fr}
+  .hero {min-height:100%}
+  .bouquet-stage {min-height:230px}
+  #sceneControls {gap:6px;padding:10px 5px}
+  #sceneControls button {padding:10px 11px;font-size:12px}
+  #sceneCounter {min-width:57px;font-size:13px}
+  #musicButton {bottom:70px;right:8px;font-size:12px;padding:9px 11px}
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*:before,*:after {
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="stars" aria-hidden="true"></div>
+
+<header>
+  <div class="nav">
+    <div class="brand">✦ LẠI TỐ QUYÊN ✦</div>
+    <button onclick="showScene(2)">🎁 Mở quà</button>
+  </div>
+</header>
+
+<main>
+<!-- CẢNH 1 -->
+<section class="hero center" id="start">
+  <div>
+    <div class="eyebrow">Một món quà nhỏ cho ngày đặc biệt</div>
+    <h1>Gửi Quyên<br>một chút dịu dàng</h1>
+    <p class="lead">Tớ đã chuẩn bị một góc nhỏ đầy hoa, những lời chúc và vài điều chân thành dành cho cậu. Mong món quà này khiến ngày hôm nay của cậu vui hơn một chút. 🌷</p>
+    <button class="btn" onclick="changeScene(1)">Bắt đầu hành trình ✨</button>
+  </div>
+</section>
+
+<!-- CẢNH 2 -->
+<section id="letter">
+  <div class="eyebrow">01 · Bức thư mở đầu</div>
+  <h2>Một lời nhắn nhỏ 💌</h2>
+  <p>Quyên à, nhân ngày 20/10, tớ muốn gửi cậu một món quà nhỏ được làm bằng sự chân thành. Có thể nó không hoàn hảo, nhưng từng phần đều được chuẩn bị với mong muốn cậu có thêm một khoảnh khắc vui vẻ.</p>
+  <p>Tớ mong cậu luôn được là chính mình, được làm những điều cậu yêu thích và có thật nhiều ngày bình yên. Cảm ơn cậu vì những kỷ niệm đẹp mà tớ vẫn trân trọng.</p>
+  <div class="note">“Một món quà nhỏ, gửi đi cùng lời chúc thật lòng.”</div>
+</section>
+
+<!-- CẢNH 3 -->
+<section id="flowers" class="center">
+  <div class="eyebrow">02 · Món quà đầu tiên</div>
+  <h2>Một bó hoa dành tặng Quyên 🌷</h2>
+  <p>Nhấn vào bó hoa nhé — một bó hoa nhỏ sẽ bung nở thành cả một vườn hoa dành cho cậu.</p>
+  <div class="bouquet-stage" id="bouquetStage">
+    <button class="bouquet-button" id="bouquetButton" aria-label="Bung nở nhiều bó hoa" onclick="burstBouquets()">💐</button>
+    <div class="bouquet-caption" id="flowerCaption">Chạm vào bó hoa để mở món quà ✨</div>
+  </div>
+  <p id="flowerMessage" class="lead" aria-live="polite"></p>
+</section>
+
+<!-- CẢNH 4 -->
+<section id="gift" class="center">
+  <div class="eyebrow">03 · Hộp quà bí mật</div>
+  <h2>Bên trong có gì nhỉ? 🎁</h2>
+  <p>Nhấn vào hộp quà để mở món quà bí mật.</p>
+  <div class="giftbox" id="giftbox" role="button" tabindex="0" aria-label="Mở hộp quà" onclick="openGift()">
+    <div class="gift-base"></div>
+    <div class="gift-lid"></div>
+  </div>
+  <div class="gift-message" id="giftMessage">💖 Món quà bí mật là lời chúc: mong cậu luôn gặp được những người tử tế, có đủ can đảm theo đuổi ước mơ và luôn nhớ rằng cậu xứng đáng với những điều tốt đẹp.</div>
+</section>
+
+<!-- CẢNH 5 -->
+<section id="wishes">
+  <div class="eyebrow">04 · Những lời chúc</div>
+  <h2>Gửi cậu những điều thật đẹp 💖</h2>
+  <div class="grid">
+    <div class="tile"><span class="big-emoji">🌸</span><h3>Luôn rạng rỡ</h3><p>Chúc cậu có nhiều niềm vui và luôn giữ được nét đáng yêu của riêng mình.</p></div>
+    <div class="tile"><span class="big-emoji">🌙</span><h3>Luôn bình yên</h3><p>Mong những ngày bận rộn cũng có những phút giây để cậu nghỉ ngơi và mỉm cười.</p></div>
+    <div class="tile"><span class="big-emoji">🌟</span><h3>Luôn tự tin</h3><p>Chúc cậu mạnh mẽ theo đuổi điều mình yêu thích và tự hào về chính mình.</p></div>
+  </div>
+</section>
+
+<!-- CẢNH 6 -->
+<section id="starsSection" class="center">
+  <div class="eyebrow">05 · Bầu trời điều ước</div>
+  <h2>Chạm vào một vì sao ✨</h2>
+  <p>Mỗi ngôi sao giữ một lời chúc dành cho cậu.</p>
+  <div>
+    <span class="wish-star" onclick="showStarWish(0)">✦</span>
+    <span class="wish-star" onclick="showStarWish(1)">✧</span>
+    <span class="wish-star" onclick="showStarWish(2)">★</span>
+    <span class="wish-star" onclick="showStarWish(3)">✦</span>
+    <span class="wish-star" onclick="showStarWish(4)">✧</span>
+  </div>
+  <p id="starWish" aria-live="polite">Chọn một ngôi sao để khám phá điều ước.</p>
+</section>
+
+<!-- CẢNH 7 -->
+<section id="bubbles" class="center">
+  <div class="eyebrow">06 · Bong bóng hạnh phúc</div>
+  <h2>Chạm nhẹ, nhận lời chúc 🫧</h2>
+  <p>Chọn một bong bóng bất kỳ nhé.</p>
+  <div>
+    <button class="bubble" onclick="bubbleWish(0)" aria-label="Bong bóng một">♡</button>
+    <button class="bubble" onclick="bubbleWish(1)" aria-label="Bong bóng hai">✧</button>
+    <button class="bubble" onclick="bubbleWish(2)" aria-label="Bong bóng ba">🌸</button>
+    <button class="bubble" onclick="bubbleWish(3)" aria-label="Bong bóng bốn">♡</button>
+  </div>
+  <p id="bubbleWish" aria-live="polite">Một điều dễ thương đang chờ cậu.</p>
+</section>
+
+<!-- CẢNH 8 -->
+<section id="random" class="center">
+  <div class="eyebrow">07 · Quà ngẫu nhiên</div>
+  <h2>Mở một lời chúc bất ngờ 🎀</h2>
+  <p>Không biết hôm nay cậu cần nghe điều gì nhất, vậy hãy để món quà chọn nhé.</p>
+  <button class="btn" onclick="randomWish()">Mở lời chúc 💝</button>
+  <p id="randomWish" aria-live="polite">Nhấn nút để mở món quà.</p>
+</section>
+
+<!-- CẢNH 9 -->
+<section id="garden" class="center">
+  <div class="eyebrow">08 · Khu vườn của Quyên</div>
+  <h2>Để hoa nở theo từng lần chạm 🌹</h2>
+  <p>Nhấn nút để khu vườn nhỏ nở thêm những bông hoa.</p>
+  <button class="btn" onclick="growGarden()">Cho hoa nở 🌷</button>
+  <div id="gardenFlowers" class="grid"></div>
+</section>
+
+<!-- CẢNH 10 -->
+<section id="sorry">
+  <div class="eyebrow">09 · Một lời xin lỗi chân thành</div>
+  <h2>Nếu có điều gì tớ làm chưa tốt…</h2>
+  <p>Tớ xin lỗi vì những lúc mình chưa đủ tinh tế, chưa biết cách lắng nghe hoặc đã khiến cậu không vui. Tớ hiểu rằng lời xin lỗi chỉ có ý nghĩa khi đi cùng sự trưởng thành và thay đổi.</p>
+  <p>Tớ không viết những dòng này để cậu phải phản hồi hay cảm thấy có trách nhiệm với cảm xúc của tớ. Tớ chỉ muốn thành thật nhận phần thiếu sót của mình và chúc cậu những điều tốt đẹp.</p>
+</section>
+
+<!-- CẢNH 11 -->
+<section id="memories">
+  <div class="eyebrow">10 · Những điều tớ trân trọng</div>
+  <h2>Có những điều vẫn đáng quý 🌙</h2>
+  <div class="grid">
+    <div class="tile"><span class="big-emoji">☁️</span><h3>Những khoảnh khắc bình thường</h3><p>Đôi khi những điều giản dị lại trở thành kỷ niệm đáng nhớ.</p></div>
+    <div class="tile"><span class="big-emoji">🕊️</span><h3>Sự chân thành</h3><p>Tớ trân trọng những điều tốt đẹp đã có, và cũng tôn trọng con đường riêng của cậu.</p></div>
+    <div class="tile"><span class="big-emoji">🌱</span><h3>Sự trưởng thành</h3><p>Mong cả hai đều học được điều có ích và ngày càng biết quan tâm đúng cách.</p></div>
+  </div>
+</section>
+
+<!-- CẢNH 12 -->
+<section id="butterfly" class="center">
+  <div class="eyebrow">11 · Cánh bướm hy vọng</div>
+  <h2>Mong những điều tốt đẹp tìm đến 🦋</h2>
+  <p>Nhấn vào nút để thả những cánh bướm nhỏ lên bầu trời.</p>
+  <button class="btn" onclick="releaseButterflies()">Thả cánh bướm 🦋</button>
+  <div id="butterflyArea" style="font-size:2rem;min-height:60px;margin-top:15px"></div>
+</section>
+
+<!-- CẢNH 13 -->
+<section id="future">
+  <div class="eyebrow">12 · Con đường phía trước</div>
+  <h2>Mong cậu luôn bước về phía ánh sáng 🌠</h2>
+  <p>Chúc Quyên gặp được những cơ hội tốt, có những người bạn đáng tin, làm được những điều khiến cậu tự hào và đủ bình tĩnh khi cuộc sống không diễn ra như mong đợi.</p>
+  <div>
+    <span class="pill">Bình an</span>
+    <span class="pill">Tự tin</span>
+    <span class="pill">Nhiều niềm vui</span>
+    <span class="pill">Ước mơ thành hình</span>
+  </div>
+</section>
+
+<!-- CẢNH 14 -->
+<section id="special" class="center">
+  <div class="eyebrow">13 · Món quà đặc biệt</div>
+  <h2>Một chiếc hộp dành riêng cho cậu 🎀</h2>
+  <p>Nhấn để mở chiếc hộp nhỏ này và nhận một lời nhắn khác.</p>
+  <button class="btn" onclick="specialGift()">Mở món quà đặc biệt ✨</button>
+  <p id="specialMessage" class="lead" aria-live="polite"></p>
+</section>
+
+<!-- CẢNH 15 -->
+<section id="message">
+  <div class="eyebrow">14 · Một lời nhắn dành riêng cho Quyên</div>
+  <h2>Điều tớ muốn cậu biết ❤️</h2>
+  <p>Tớ vẫn trân trọng những điều tốt đẹp từng có. Nếu sau này chúng ta có dịp nói chuyện lại, tớ mong đó sẽ là lúc cả hai đều thoải mái và tự nguyện. Còn hiện tại, tớ tôn trọng không gian và lựa chọn của cậu.</p>
+  <p>Dù thế nào, tớ vẫn mong cậu hạnh phúc — không phải vì bất kỳ ai mong đợi, mà vì cậu xứng đáng có một cuộc sống khiến mình thấy vui và bình yên.</p>
+</section>
+
+<!-- CẢNH 16 -->
+<section id="ending" class="center">
+  <div class="eyebrow">15 · Chương cuối</div>
+  <h2>Đến lúc thắp sáng bầu trời 🎆</h2>
+  <p>Nhấn nút để mở màn pháo hoa dành riêng cho ngày 20/10.</p>
+  <button class="btn" onclick="startFireworks()">BẮT ĐẦU ĐẠI TIỆC PHÁO HOA 🎆</button>
+</section>
+</main>
+
+<div id="sceneProgress"></div>
+<nav id="sceneControls" aria-label="Điều hướng các cảnh">
+  <button id="prevScene" onclick="changeScene(-1)">← Quay lại</button>
+  <span id="sceneCounter">01 / 16</span>
+  <button id="nextScene" onclick="changeScene(1)">Tiếp tục →</button>
+</nav>
+
+<!-- NHẠC YOUTUBE -->
+<div id="youtubeMusic" style="position:fixed;width:1px;height:1px;overflow:hidden;left:-10px;top:-10px">
+  <iframe
+    id="ytPlayer"
+    width="1"
+    height="1"
+    src="https://www.youtube.com/embed/_V3s5jq6ixE?autoplay=1&loop=1&playlist=_V3s5jq6ixE"
+    title="Nhạc nền"
+    allow="autoplay; encrypted-media"
+    referrerpolicy="strict-origin-when-cross-origin">
+  </iframe>
+</div>
+<button id="musicButton" onclick="toggleMusic()">🎵 Tắt nhạc</button>
+
+<footer>Được làm bằng sự chân thành · Chúc Lại Tố Quyên một ngày 20/10 thật dịu dàng 🌷</footer>
+
+<!-- MÀN HÌNH PHÁO HOA CUỐI -->
+<div id="finalOverlay" role="dialog" aria-modal="true" aria-label="Lời chúc cuối cùng">
+  <canvas id="fireworks"></canvas>
+  <button class="close-final" onclick="closeFireworks()" aria-label="Đóng">×</button>
+  <div class="final-card">
+    <div class="eyebrow">Dành tặng Lại Tố Quyên</div>
+    <h2>Chúc mừng 20/10! 🌷</h2>
+    <p>Chúc Quyên ngày 20/10 thật rực rỡ, luôn bình an, hạnh phúc và tự tin theo đuổi những ước mơ của riêng mình.</p>
+    <p>Mong rằng mỗi ngày phía trước đều mang đến cho cậu những điều tử tế và thật nhiều lý do để mỉm cười. 💖</p>
+    <p style="color:#ffe7a3">✨ Mong cậu luôn gặp những điều tốt đẹp trên hành trình của riêng mình. ✨</p>
+  </div>
+</div>
+
+<script>
+/* NGÔI SAO NỀN */
+const stars = document.getElementById('stars');
+for(let i=0;i<110;i++){
+  const s=document.createElement('i');
+  s.className='star';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*100+'%';
+  s.style.animationDelay=Math.random()*4+'s';
+  s.style.animationDuration=(2+Math.random()*4)+'s';
+  stars.appendChild(s);
+}
+
+/* ĐIỀU HƯỚNG CẢNH */
+const scenes=[...document.querySelectorAll('main > section')];
+let currentScene=0;
+let changingScene=false;
+
+function showScene(index){
+  if(index<0||index>=scenes.length||changingScene)return;
+  changingScene=true;
+
+  scenes.forEach((scene,i)=>{
+    scene.classList.toggle('active-scene',i===index);
+    if(i===index)scene.scrollTop=0;
+  });
+
+  currentScene=index;
+  document.getElementById('sceneCounter').textContent=
+    String(index+1).padStart(2,'0')+' / '+
+    String(scenes.length).padStart(2,'0');
+
+  document.getElementById('prevScene').disabled=index===0;
+  document.getElementById('nextScene').textContent=
+    index===scenes.length-1?'Pháo hoa 🎆':'Tiếp tục →';
+
+  document.getElementById('sceneProgress').style.width=
+    ((index+1)/scenes.length*100)+'%';
+
+  setTimeout(()=>{changingScene=false},680);
+}
+
+function changeScene(direction){
+  if(changingScene)return;
+  const next=currentScene+direction;
+  if(next>=scenes.length){startFireworks();return}
+  if(next>=0)showScene(next);
+}
+
+document.addEventListener('keydown',e=>{
+  if(document.getElementById('finalOverlay').classList.contains('show')){
+    if(e.key==='Escape')closeFireworks();
+    return;
+  }
+  if(e.key==='ArrowRight')changeScene(1);
+  if(e.key==='ArrowLeft')changeScene(-1);
+});
+
+/* BÓ HOA */
+function burstBouquets(){
+  const stage=document.getElementById('bouquetStage');
+  const button=document.getElementById('bouquetButton');
+
+  button.animate([
+    {transform:'scale(1)'},
+    {transform:'scale(1.28) rotate(-8deg)'},
+    {transform:'scale(.9)'},
+    {transform:'scale(1)'}
+  ],{duration:700,easing:'ease-out'});
+
+  const flowers=['💐','🌷','🌹','💐','🌸','🌺','💐','🌷','🌹','💐','🌼','🌸','💐','🌹','🌷','💐'];
+
+  flowers.forEach((flower,i)=>{
+    const el=document.createElement('span');
+    el.className='mini-bouquet';
+    el.textContent=flower;
+
+    const angle=Math.PI*2*i/flowers.length+(Math.random()-.5)*.3;
+    const radius=100+Math.random()*150;
+
+    el.style.setProperty('--x',Math.cos(angle)*radius+'px');
+    el.style.setProperty('--y',Math.sin(angle)*radius+'px');
+    el.style.setProperty('--r',(Math.random()*90-45)+'deg');
+    el.style.left='calc(50% - 20px)';
+    el.style.top='42%';
+    el.style.animationDelay=Math.random()*.25+'s';
+
+    stage.appendChild(el);
+    setTimeout(()=>el.remove(),3300);
+  });
+
+  for(let i=0;i<32;i++)makePetal(['🌸','🌷','💗','✨'][i%4]);
+
+  document.getElementById('flowerCaption').textContent='Một bó hoa nhỏ đã nở thành cả vườn hoa! 💐';
+  document.getElementById('flowerMessage').textContent='Tớ gửi cậu những bông hoa cùng lời chúc chân thành nhất. Mong Quyên luôn vui vẻ, bình an và được yêu thương thật nhiều! 💖';
+}
+
+function makePetal(symbol){
+  const p=document.createElement('span');
+  p.className='petal';
+  p.textContent=symbol;
+  p.style.left=Math.random()*100+'vw';
+  p.style.setProperty('--drift',(Math.random()*220-110)+'px');
+  p.style.animationDuration=(3+Math.random()*3)+'s';
+  document.body.appendChild(p);
+  setTimeout(()=>p.remove(),6500);
+}
+
+/* HỘP QUÀ */
+function openGift(){
+  document.getElementById('giftbox').classList.add('open');
+  document.getElementById('giftMessage').classList.add('show');
+  for(let i=0;i<12;i++){
+    setTimeout(()=>makePetal(['💖','✨','🌸'][i%3]),i*80);
+  }
+}
+document.getElementById('giftbox').addEventListener('keydown',e=>{
+  if(e.key==='Enter'||e.key===' '){
+    e.preventDefault();
+    openGift();
+  }
+});
+
+/* ĐIỀU ƯỚC */
+const starWishes=[
+  'Mong cậu luôn có sức khỏe và bình an. 🌙',
+  'Mong những ước mơ của cậu dần thành hiện thực. 🌟',
+  'Mong cậu luôn gặp những người biết trân trọng cậu. 💖',
+  'Mong mỗi ngày đều có một điều nhỏ khiến cậu vui. 🌸',
+  'Mong cậu luôn tự tin và dịu dàng với chính mình. ✨'
+];
+function showStarWish(i){
+  document.getElementById('starWish').textContent=starWishes[i];
+}
+
+const bubbleWishes=[
+  'Hôm nay nhớ dành thời gian chăm sóc bản thân nhé. 🌷',
+  'Cậu xứng đáng với những điều tử tế. 💖',
+  'Mong nụ cười sẽ ghé thăm cậu thật nhiều. ✨',
+  'Chúc cậu luôn tự tin trên con đường mình chọn. 🦋'
+];
+function bubbleWish(i){
+  document.getElementById('bubbleWish').textContent=bubbleWishes[i];
+}
+
+/* LỜI CHÚC NGẪU NHIÊN */
+const randomWishes=[
+  'Chúc cậu có một ngày ngập tràn những điều dễ thương. 🌸',
+  'Mong điều cậu đang cố gắng sẽ có kết quả thật tốt. 🌟',
+  'Chúc cậu luôn đủ can đảm để bắt đầu điều mới. 🦋',
+  'Mong những ngày mệt mỏi sẽ sớm được thay bằng bình yên. 🌙',
+  'Chúc cậu được lắng nghe, thấu hiểu và trân trọng. 💗',
+  'Mong cuộc sống trao cho cậu nhiều bất ngờ đẹp đẽ. 🎀'
+];
+function randomWish(){
+  const el=document.getElementById('randomWish');
+  el.textContent=randomWishes[Math.floor(Math.random()*randomWishes.length)];
+  el.animate([
+    {opacity:0,transform:'translateY(8px)'},
+    {opacity:1,transform:'translateY(0)'}
+  ],{duration:500});
+}
+
+/* KHU VƯỜN */
+let gardenCount=0;
+function growGarden(){
+  const area=document.getElementById('gardenFlowers');
+  const flowers=['🌷','🌹','🌸','🌼','💐','🌺','🌻','💮'];
+
+  for(let i=0;i<4;i++){
+    const tile=document.createElement('div');
+    tile.className='tile';
+    tile.innerHTML='<span class="big-emoji">'+flowers[(gardenCount+i)%flowers.length]+'</span><p>Một bông hoa nhỏ, một lời chúc thật lòng.</p>';
+    area.appendChild(tile);
+    tile.animate([
+      {opacity:0,transform:'scale(.5) rotate(-10deg)'},
+      {opacity:1,transform:'scale(1) rotate(0)'}
+    ],{duration:500,delay:i*80,fill:'both'});
+  }
+  gardenCount+=4;
+}
+
+/* CÁNH BƯỚM */
+function releaseButterflies(){
+  const area=document.getElementById('butterflyArea');
+  area.innerHTML='';
+
+  for(let i=0;i<8;i++){
+    const b=document.createElement('span');
+    b.textContent='🦋';
+    b.style.display='inline-block';
+    b.style.margin='8px';
+    b.animate([
+      {transform:'translateY(25px) rotate(-15deg)',opacity:0},
+      {transform:'translateY(-20px) rotate(15deg)',opacity:1},
+      {transform:'translateY(-65px) rotate(-15deg)',opacity:0}
+    ],{duration:1800+Math.random()*1000,delay:i*100,fill:'forwards'});
+    area.appendChild(b);
+  }
+}
+
+/* QUÀ ĐẶC BIỆT */
+function specialGift(){
+  const msgs=[
+    'Cậu hãy luôn tin rằng những cố gắng nhỏ mỗi ngày đều có ý nghĩa. 🌟',
+    'Mong cậu tìm thấy niềm vui trong cả những điều giản dị nhất. 🌷',
+    'Một lời nhắc nhỏ: hãy đối xử với bản thân bằng sự dịu dàng nhé. 💖'
+  ];
+  const el=document.getElementById('specialMessage');
+  el.textContent=msgs[Math.floor(Math.random()*msgs.length)];
+  el.animate([
+    {opacity:0,transform:'scale(.94)'},
+    {opacity:1,transform:'scale(1)'}
+  ],{duration:600});
+}
+
+/* NHẠC YOUTUBE */
+const ytPlayer=document.getElementById('ytPlayer');
+const musicButton=document.getElementById('musicButton');
+const youtubeURL='https://www.youtube.com/embed/_V3s5jq6ixE?autoplay=1&loop=1&playlist=_V3s5jq6ixE';
+let musicPlaying=true;
+
+function toggleMusic(){
+  if(musicPlaying){
+    ytPlayer.src='';
+    musicPlaying=false;
+    musicButton.textContent='🎵 Bật nhạc';
+  }else{
+    ytPlayer.src=youtubeURL;
+    musicPlaying=true;
+    musicButton.textContent='🎵 Tắt nhạc';
+  }
+}
+
+/* PHÁO HOA */
+const canvas=document.getElementById('fireworks');
+const ctx=canvas.getContext('2d');
+let cw=0,ch=0,dpr=1,particles=[],rockets=[],raf=0;
+let fireworksOn=false,startAt=0,lastLaunch=0;
+
+function resizeCanvas(){
+  dpr=Math.min(window.devicePixelRatio||1,2);
+  cw=window.innerWidth;
+  ch=window.innerHeight;
+  canvas.width=cw*dpr;
+  canvas.height=ch*dpr;
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+window.addEventListener('resize',resizeCanvas);
+resizeCanvas();
+
+function launchRocket(){
+  rockets.push({
+    x:cw*(.15+Math.random()*.7),
+    y:ch+10,
+    targetY:ch*(.15+Math.random()*.45),
+    vx:(Math.random()-.5)*2,
+    vy:-(7+Math.random()*3),
+    hue:Math.random()*360
+  });
+}
+
+function explode(x,y,hue){
+  const heart=Math.random()<.24;
+  const count=heart?100:75;
+
+  for(let i=0;i<count;i++){
+    const a=Math.PI*2*i/count;
+    let speed=heart?(Math.sin(a)**3*16+Math.random()*1.5+1):(1.2+Math.random()*5.5);
+    let vx=Math.cos(a)*speed;
+    let vy=Math.sin(a)*speed;
+
+    if(heart){
+      const hx=16*Math.sin(a)**3;
+      const hy=-(13*Math.cos(a)-5*Math.cos(2*a)-2*Math.cos(3*a)-Math.cos(4*a));
+      vx=hx*.28+(Math.random()-.5);
+      vy=hy*.28+(Math.random()-.5);
+    }
+
+    particles.push({
+      x,y,vx,vy,life:1,
+      decay:.008+Math.random()*.012,
+      hue:hue+Math.random()*35,
+      size:1+Math.random()*2.4
+    });
+  }
+}
+
+function fireworkFrame(now){
+  if(!fireworksOn)return;
+
+  ctx.fillStyle='rgba(8,6,17,.2)';
+  ctx.fillRect(0,0,cw,ch);
+
+  if(now-lastLaunch>430){
+    launchRocket();
+    lastLaunch=now;
+  }
+
+  for(let i=rockets.length-1;i>=0;i--){
+    const r=rockets[i];
+    r.x+=r.vx;
+    r.y+=r.vy;
+    r.vy+=.035;
+
+    ctx.beginPath();
+    ctx.fillStyle=`hsl(${r.hue},100%,75%)`;
+    ctx.arc(r.x,r.y,2.2,0,Math.PI*2);
+    ctx.fill();
+
+    if(r.y<=r.targetY||r.vy>=-1){
+      explode(r.x,r.y,r.hue);
+      rockets.splice(i,1);
+    }
+  }
+
+  for(let i=particles.length-1;i>=0;i--){
+    const p=particles[i];
+    p.x+=p.vx;
+    p.y+=p.vy;
+    p.vx*=.985;
+    p.vy=p.vy*.985+.035;
+    p.life-=p.decay;
+
+    ctx.beginPath();
+    ctx.globalAlpha=Math.max(p.life,0);
+    ctx.fillStyle=`hsl(${p.hue},100%,${60+p.life*25}%)`;
+    ctx.arc(p.x,p.y,p.size,0,Math.PI*2);
+    ctx.fill();
+
+    if(p.life<=0)particles.splice(i,1);
+  }
+
+  ctx.globalAlpha=1;
+
+  if(now-startAt>18000){
+    fireworksOn=false;
+    cancelAnimationFrame(raf);
+    return;
+  }
+
+  raf=requestAnimationFrame(fireworkFrame);
+}
+
+function startFireworks(){
+  const overlay=document.getElementById('finalOverlay');
+  overlay.classList.add('show');
+  resizeCanvas();
+  particles=[];
+  rockets=[];
+  ctx.clearRect(0,0,cw,ch);
+  fireworksOn=true;
+  startAt=performance.now();
+  lastLaunch=0;
+  cancelAnimationFrame(raf);
+  raf=requestAnimationFrame(fireworkFrame);
+
+  for(let i=0;i<4;i++){
+    setTimeout(()=>{
+      if(fireworksOn){
+        explode(cw*(.2+Math.random()*.6),ch*(.15+Math.random()*.35),Math.random()*360);
+      }
+    },i*250);
+  }
+}
+
+function closeFireworks(){
+  document.getElementById('finalOverlay').classList.remove('show');
+  fireworksOn=false;
+  cancelAnimationFrame(raf);
+  ctx.clearRect(0,0,cw,ch);
+}
+
+/* KHỞI ĐỘNG CẢNH ĐẦU */
+showScene(0);
+</script>
+</body>
+</html>
